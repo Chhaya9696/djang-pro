@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show details</title>
+</head>
+<body>
+<h1>Batch details</h1>
+<table>
+  <tr>
+    <th> Batch_no </th>
+    <th> Module  </th>
+    <th> Time </th>
+    <th> Lab </th>
+  </tr>
+  {% for b in batch1 %}
+  <tr>
+    <td>{{b.batchno}} </td>
+    <td>{{b.module}} </td>
+    <td>{{b.time}} </td>
+    <td>{{b.labno}}  </td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product deatail</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>product_name</th>
+        <th>price</th>
+        <th>quantity</th>
+    </tr>
+    {% for s in Stock %}
+    <tr>
+        <td>{{s.proc_name}}</td>
+        <td>{{s.proc_price}}</td>
+        <td>{{s.qty}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

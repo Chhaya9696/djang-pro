@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link  rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link  rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <script src="{%static 'js/script.js' %}"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <meta charset="UTF-8">
+    <title>Index page</title>
+</head>
+<body>
+{% block header %}
+<div>
+<img src="{% static 'image/3rinfotech_logo.jpeg'%}" height="50px" width="50px" align="left">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'contact' %}">contact</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'createbatch' %}">createbatch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{% url 'showdetail' %}">show batch details</a>
+      </li>
+    </ul>
+    <form class="fotrm-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="c2"><a  href="" >signin</a></button>
+    </form>
+  </div>
+</nav>
+
+</div>
+{% endblock %}
+{% block content %}
+<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="{% static 'image/java.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Full_Stack With Java</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static 'image/pythonn.jpeg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Full_Stack Development With Python</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="{% static 'image/mern2.jpeg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"> Mern_Stack Development</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+<p> we learn django
+Django is python based framework
+</p>
+{% endblock %}
+{% block footer %}
+
+<span class="border"><img class="area" src="{% static 'image/tata-logo-design.jpg' %}" </span>
+<span class="border-top"><img class="area" src="{% static 'image/mahindra.png' %}" </span>
+<span class="border-right"> <img class="area" src="{% static 'image/infosys.png'  %}" </span>
+<span class="border-bottom"><img class="area" src="{% static 'image/download.png'  %}"</span>
+<span class="border-left"></span>
+{% endblock %}
+</body>
+</html>

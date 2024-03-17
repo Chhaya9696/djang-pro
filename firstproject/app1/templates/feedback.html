@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feed back </title>
+</head>
+<body>
+<!--{% extends 'index.html' %}-->
+<h1>hii</h1>
+{% if request.user.is_authenticated %}
+    <a  href="{% url 'signout' %}">signout</a>
+{%  endif %}
+<h1>  hello {{user}} write your feedback</h1>
+<form action="" method='POST'>
+    {% csrf_token %}
+    {{formf.as_p}}
+    <button type="submit" class="btn btn-primary btn-sm" value=""> Save</button>
+</form>
+</body>
+</html>
